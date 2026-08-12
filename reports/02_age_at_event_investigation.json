@@ -1,0 +1,75 @@
+{
+  "verdict": "EXCLUDE",
+  "interpretation": "B \u2014 age at later follow-up/event (death or censoring), not baseline PFT age",
+  "evidence": [
+    "Source paper (Boros & Martusewicz-Boros, PLOS Medicine / Zenodo 15295274): time-to-event = first PFT to death or censoring (15 Mar 2023); PFTs are baseline/first presentation.",
+    "survival time equals (event_date - First test) in days for 6785/6808 rows.",
+    "Overall mean age at event=58.49; implied baseline age (age_at_event - survival_years) mean=51.12 matches paper Table 2 overall Age=51.13.",
+    "Per-group implied baseline ages match paper Table 2 Age means within ~0.05 years.",
+    "Column is literally named 'age at event' and sits next to event_date / dead or alive / survival time."
+  ],
+  "decision": "Do NOT use age at event for diagnosis classification. It incorporates follow-up duration (patients who survive longer appear older), creating temporal leakage relative to baseline PFT prediction time.",
+  "by_group": [
+    {
+      "diagnosis group": "1_SAR",
+      "n": 3180,
+      "age_at_event_mean": 52.184591194968554,
+      "implied_baseline_age_mean": 43.24400169608995,
+      "paper_table2_age_mean": 43.26,
+      "abs_diff_implied_vs_paper": 0.01599830391004531
+    },
+    {
+      "diagnosis group": "CTD",
+      "n": 640,
+      "age_at_event_mean": 65.9609375,
+      "implied_baseline_age_mean": 59.53137726728268,
+      "paper_table2_age_mean": 59.56,
+      "abs_diff_implied_vs_paper": 0.02862273271732363
+    },
+    {
+      "diagnosis group": "HP",
+      "n": 515,
+      "age_at_event_mean": 59.15533980582524,
+      "implied_baseline_age_mean": 52.318447930995525,
+      "paper_table2_age_mean": 52.34,
+      "abs_diff_implied_vs_paper": 0.02155206900447837
+    },
+    {
+      "diagnosis group": "IPF",
+      "n": 757,
+      "age_at_event_mean": 72.82166446499339,
+      "implied_baseline_age_mean": 68.26167090274029,
+      "paper_table2_age_mean": 68.3,
+      "abs_diff_implied_vs_paper": 0.038329097259705236
+    },
+    {
+      "diagnosis group": "i-NSIP",
+      "n": 128,
+      "age_at_event_mean": 63.3515625,
+      "implied_baseline_age_mean": 57.49835835900069,
+      "paper_table2_age_mean": 57.51,
+      "abs_diff_implied_vs_paper": 0.011641640999307867
+    },
+    {
+      "diagnosis group": "o-ILD",
+      "n": 1391,
+      "age_at_event_mean": 59.75197699496765,
+      "implied_baseline_age_mean": 53.42893520534619,
+      "paper_table2_age_mean": 53.44,
+      "abs_diff_implied_vs_paper": 0.011064794653805166
+    },
+    {
+      "diagnosis group": "u-ILD",
+      "n": 197,
+      "age_at_event_mean": 66.95939086294416,
+      "implied_baseline_age_mean": 61.3511606333191,
+      "paper_table2_age_mean": 61.37,
+      "abs_diff_implied_vs_paper": 0.018839366680900582
+    }
+  ],
+  "survival_equals_date_delta_n": 6785,
+  "n_rows": 6808,
+  "age_at_event_overall_mean": 58.485311398354874,
+  "implied_baseline_overall_mean": 51.11629109691783,
+  "paper_overall_age": 51.13
+}

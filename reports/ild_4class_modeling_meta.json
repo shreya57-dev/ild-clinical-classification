@@ -1,0 +1,70 @@
+{
+  "raw_path": "database_final_anonymized_for_zenodo.csv",
+  "n_rows_raw": 6808,
+  "n_rows_modeling": 5092,
+  "n_features": 14,
+  "features": [
+    "fev1fvc_abs",
+    "fev1_z",
+    "fev1_pp",
+    "fvc_z",
+    "fvc_pp",
+    "fev1fvc_z",
+    "tlc_z",
+    "tlc_pp",
+    "tlco_z",
+    "tlco_pp",
+    "sex",
+    "age at event",
+    "Height",
+    "Weight"
+  ],
+  "target": "diagnosis group",
+  "classes": [
+    "IPF",
+    "HP",
+    "CTD",
+    "1_SAR"
+  ],
+  "class_counts": {
+    "IPF": 757,
+    "HP": 515,
+    "CTD": 640,
+    "1_SAR": 3180
+  },
+  "missing_total": 0,
+  "n_suspicious_flags": 360,
+  "n_unique_rows_flagged": 355,
+  "high_corr_threshold": 0.9,
+  "high_corr_pairs": [
+    {
+      "feature_a": "tlc_z",
+      "feature_b": "tlc_pp",
+      "pearson_r": 0.9966327797244717
+    },
+    {
+      "feature_a": "fvc_z",
+      "feature_b": "fvc_pp",
+      "pearson_r": 0.9914803476135656
+    },
+    {
+      "feature_a": "fev1_z",
+      "feature_b": "fev1_pp",
+      "pearson_r": 0.9910793882738985
+    },
+    {
+      "feature_a": "tlco_z",
+      "feature_b": "tlco_pp",
+      "pearson_r": 0.9838307174205632
+    },
+    {
+      "feature_a": "fev1fvc_abs",
+      "feature_b": "fev1fvc_z",
+      "pearson_r": 0.9518864714166814
+    }
+  ],
+  "outputs": {
+    "modeling_csv": "data\\processed\\ild_4class_modeling_data.csv",
+    "report": "reports\\01_modeling_dataset_quality_report.md"
+  }
+}

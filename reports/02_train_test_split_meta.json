@@ -1,0 +1,78 @@
+{
+  "target": "diagnosis group",
+  "classes": [
+    "IPF",
+    "HP",
+    "CTD",
+    "1_SAR"
+  ],
+  "final_features": [
+    "fev1fvc_abs",
+    "fev1_z",
+    "fev1_pp",
+    "fvc_z",
+    "fvc_pp",
+    "fev1fvc_z",
+    "tlc_z",
+    "tlc_pp",
+    "tlco_z",
+    "tlco_pp",
+    "sex",
+    "Height",
+    "Weight"
+  ],
+  "excluded": {
+    "Case_number": "Identifier \u2014 not a clinical predictor.",
+    "First test": "Baseline calendar date \u2014 temporal/cohort information; not a physiological predictor.",
+    "event_date": "Death/censoring date \u2014 future relative to baseline PFT; outcome timing leakage.",
+    "dead or alive": "Mortality/censoring outcome after follow-up \u2014 outcome leakage for diagnosis classification.",
+    "survival time": "Days from First test to event_date \u2014 follow-up/outcome duration leakage.",
+    "age at event": "Age at death or censoring (event_date), NOT age at baseline PFT. Equals approximately paper baseline Age + survival_years. Temporal leakage.",
+    "diagnosis group": "Target variable y \u2014 must not appear in X."
+  },
+  "age_at_event_decision": "EXCLUDE",
+  "age_at_event_interpretation": "B \u2014 age at later follow-up/event (death or censoring), not baseline PFT age",
+  "n_train": 4073,
+  "n_test": 1019,
+  "test_size": 0.2,
+  "random_state": 42,
+  "train_class_counts": {
+    "IPF": 605,
+    "HP": 412,
+    "CTD": 512,
+    "1_SAR": 2544
+  },
+  "test_class_counts": {
+    "IPF": 152,
+    "HP": 103,
+    "CTD": 128,
+    "1_SAR": 636
+  },
+  "train_class_pct": {
+    "IPF": 14.85,
+    "HP": 10.12,
+    "CTD": 12.57,
+    "1_SAR": 62.46
+  },
+  "test_class_pct": {
+    "IPF": 14.92,
+    "HP": 10.11,
+    "CTD": 12.56,
+    "1_SAR": 62.41
+  },
+  "preprocessing_rule": "Any preprocessing whose parameters are learned from data must be fitted using training data only and then applied to the test data.",
+  "checks": [
+    "PASS: target not in X_train/X_test",
+    "PASS: all excluded leakage/id fields absent from X",
+    "PASS: train(4073)+test(1019)=5092",
+    "PASS: train/test index sets disjoint",
+    "INFO: identical feature+label row strings shared across splits: 0 (coincidence possible; indices disjoint)",
+    "PASS: all 4 classes present in train",
+    "PASS: all 4 classes present in test",
+    "PASS: max |train%-test%| class gap = 0.07 pp (<1.0)",
+    "PASS: X columns match FINAL_FEATURES"
+  ],
+  "train_csv": "data\\processed\\train.csv",
+  "test_csv": "data\\processed\\test.csv",
+  "no_model_trained": true
+}
