@@ -1,0 +1,65 @@
+{
+  "model": "LogisticRegression",
+  "lr_params": {
+    "solver": "lbfgs",
+    "C": 1.0,
+    "l1_ratio": 0.0,
+    "max_iter": 2000,
+    "random_state": 42
+  },
+  "preprocessing": {
+    "numeric": "StandardScaler",
+    "categorical": "OneHotEncoder(handle_unknown='ignore', sparse_output=False)",
+    "imputer": null
+  },
+  "features": [
+    "fev1fvc_abs",
+    "fev1_z",
+    "fev1_pp",
+    "fvc_z",
+    "fvc_pp",
+    "fev1fvc_z",
+    "tlc_z",
+    "tlc_pp",
+    "tlco_z",
+    "tlco_pp",
+    "sex",
+    "Height",
+    "Weight"
+  ],
+  "target": "diagnosis group",
+  "n_train": 4073,
+  "n_test": 1019,
+  "train_metrics": {
+    "accuracy": 0.7608642278418856,
+    "macro_precision": 0.6038661143387641,
+    "macro_recall": 0.5477904769599934,
+    "macro_f1": 0.5591303498209959
+  },
+  "test_metrics": {
+    "accuracy": 0.7556427870461236,
+    "macro_precision": 0.6060564496045479,
+    "macro_recall": 0.53753482022485,
+    "macro_f1": 0.5509732983915528
+  },
+  "gaps_train_minus_test": {
+    "accuracy": 0.0052214407957619224,
+    "macro_precision": -0.002190335265783716,
+    "macro_recall": 0.010255656735143392,
+    "macro_f1": 0.008157051429443007
+  },
+  "majority_class": "1_SAR",
+  "majority_test_accuracy": 0.6241413150147204,
+  "model_path": "models\\baseline_logistic_regression.joblib",
+  "checks": [
+    "PASS: row counts 4073 / 1019",
+    "PASS: expected columns present",
+    "PASS: train has all 4 classes",
+    "PASS: train has no leakage columns",
+    "PASS: train has 0 missing values in features",
+    "PASS: test has all 4 classes",
+    "PASS: test has no leakage columns",
+    "PASS: test has 0 missing values in features"
+  ],
+  "classification_report_test": "              precision    recall  f1-score   support\n\n         IPF     0.6627    0.7237    0.6918       152\n          HP     0.5217    0.2330    0.3221       103\n         CTD     0.4133    0.2422    0.3054       128\n       1_SAR     0.8265    0.9513    0.8845       636\n\n    accuracy                         0.7556      1019\n   macro avg     0.6061    0.5375    0.5510      1019\nweighted avg     0.7194    0.7556    0.7262      1019\n"
+}
