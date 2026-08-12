@@ -1,0 +1,71 @@
+{
+  "experiment": "class_weight=balanced LogisticRegression",
+  "only_change": "class_weight='balanced'",
+  "lr_params": {
+    "class_weight": "balanced",
+    "solver": "lbfgs",
+    "C": 1.0,
+    "l1_ratio": 0.0,
+    "max_iter": 2000,
+    "random_state": 42
+  },
+  "train_class_counts": {
+    "IPF": 605,
+    "HP": 412,
+    "CTD": 512,
+    "1_SAR": 2544
+  },
+  "test_class_counts": {
+    "IPF": 152,
+    "HP": 103,
+    "CTD": 128,
+    "1_SAR": 636
+  },
+  "balanced_weights_train": {
+    "IPF": 1.6830578512396694,
+    "HP": 2.471480582524272,
+    "CTD": 1.98876953125,
+    "1_SAR": 0.4002555031446541
+  },
+  "train_metrics": {
+    "accuracy": 0.7073410262705623,
+    "macro_precision": 0.5613812969168709,
+    "macro_recall": 0.5958432074408015,
+    "macro_f1": 0.574022000373267,
+    "weighted_precision": 0.750606801191016,
+    "weighted_recall": 0.7073410262705623,
+    "weighted_f1": 0.7244883026491447
+  },
+  "test_metrics": {
+    "accuracy": 0.7134445534838076,
+    "macro_precision": 0.5695391978398854,
+    "macro_recall": 0.6027957952805282,
+    "macro_f1": 0.5818596083281747,
+    "weighted_precision": 0.7529180387271249,
+    "weighted_recall": 0.7134445534838076,
+    "weighted_f1": 0.7291811251722004
+  },
+  "baseline_test_reference": {
+    "accuracy": 0.7556,
+    "macro_precision": 0.6061,
+    "macro_recall": 0.5375,
+    "macro_f1": 0.551,
+    "weighted_f1": 0.726178504873729,
+    "IPF_recall": 0.724,
+    "HP_recall": 0.233,
+    "CTD_recall": 0.242,
+    "1_SAR_recall": 0.951,
+    "IPF_f1": 0.692,
+    "HP_f1": 0.322,
+    "CTD_f1": 0.305,
+    "1_SAR_f1": 0.885,
+    "IPF_precision": 0.663,
+    "HP_precision": 0.522,
+    "CTD_precision": 0.413,
+    "1_SAR_precision": 0.827
+  },
+  "model_path": "models\\class_weighted_logistic_regression.joblib",
+  "baseline_model_unchanged": true,
+  "baseline_model_bytes": 4281,
+  "classification_report_test": "              precision    recall  f1-score   support\n\n         IPF     0.6527    0.7171    0.6834       152\n          HP     0.3559    0.4078    0.3801       103\n         CTD     0.3466    0.4766    0.4013       128\n       1_SAR     0.9229    0.8097    0.8626       636\n\n    accuracy                         0.7134      1019\n   macro avg     0.5695    0.6028    0.5819      1019\nweighted avg     0.7529    0.7134    0.7292      1019\n"
+}
