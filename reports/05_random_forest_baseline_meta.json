@@ -1,0 +1,40 @@
+{
+  "model": "RandomForestClassifier",
+  "rf_params": {
+    "n_estimators": 300,
+    "class_weight": "balanced",
+    "random_state": 42,
+    "n_jobs": -1
+  },
+  "preprocessing": {
+    "numeric": "passthrough (no scaling)",
+    "categorical": "OneHotEncoder(handle_unknown='ignore', sparse_output=False)"
+  },
+  "n_train": 4073,
+  "n_test": 1019,
+  "train_metrics": {
+    "accuracy": 0.9904247483427449,
+    "macro_precision": 0.9815178411165388,
+    "macro_recall": 0.9961674528301887,
+    "macro_f1": 0.9887118370439582,
+    "weighted_precision": 0.990664474885841,
+    "weighted_recall": 0.9904247483427449,
+    "weighted_f1": 0.9904484638185893
+  },
+  "test_metrics": {
+    "accuracy": 0.718351324828263,
+    "macro_precision": 0.5465566011735642,
+    "macro_recall": 0.537900767142141,
+    "macro_f1": 0.5412795335368492,
+    "weighted_precision": 0.7143424279990938,
+    "weighted_recall": 0.718351324828263,
+    "weighted_f1": 0.7159328073279639
+  },
+  "gaps_train_minus_test": {
+    "accuracy": 0.2720734235144818,
+    "macro_f1": 0.44743230350710894
+  },
+  "model_path": "models\\random_forest_balanced.joblib",
+  "prior_lr_models_unchanged": true,
+  "classification_report_test": "              precision    recall  f1-score   support\n\n         IPF     0.6026    0.6184    0.6104       152\n          HP     0.4235    0.3495    0.3830       103\n         CTD     0.2857    0.2969    0.2912       128\n       1_SAR     0.8744    0.8868    0.8806       636\n\n    accuracy                         0.7184      1019\n   macro avg     0.5466    0.5379    0.5413      1019\nweighted avg     0.7143    0.7184    0.7159      1019\n"
+}
