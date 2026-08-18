@@ -1,0 +1,71 @@
+{
+  "best_C": 100.0,
+  "best_cv_macro_f1": 0.5734448374703485,
+  "cv_table": [
+    {
+      "C": 0.001,
+      "mean_macro_f1": 0.5338889595411718,
+      "std_macro_f1": 0.010762167237741016,
+      "mean_accuracy": 0.6862254111333866,
+      "mean_macro_precision": 0.5291306631275169,
+      "mean_macro_recall": 0.5434337627652301
+    },
+    {
+      "C": 0.01,
+      "mean_macro_f1": 0.5484542935537898,
+      "std_macro_f1": 0.0058116120927447674,
+      "mean_accuracy": 0.692856001567658,
+      "mean_macro_precision": 0.5402956413524047,
+      "mean_macro_recall": 0.56357523941121
+    },
+    {
+      "C": 0.1,
+      "mean_macro_f1": 0.5702761726053647,
+      "std_macro_f1": 0.007153827841699597,
+      "mean_accuracy": 0.7034132738427218,
+      "mean_macro_precision": 0.5601436025971841,
+      "mean_macro_recall": 0.5904595531194867
+    },
+    {
+      "C": 1.0,
+      "mean_macro_f1": 0.5669199709047493,
+      "std_macro_f1": 0.006469144387965715,
+      "mean_accuracy": 0.7024322816960854,
+      "mean_macro_precision": 0.5566935297811566,
+      "mean_macro_recall": 0.5878025735956752
+    },
+    {
+      "C": 10.0,
+      "mean_macro_f1": 0.5708484180610656,
+      "std_macro_f1": 0.009075241159942191,
+      "mean_accuracy": 0.706605266727966,
+      "mean_macro_precision": 0.559990179729439,
+      "mean_macro_recall": 0.592362594821861
+    },
+    {
+      "C": 100.0,
+      "mean_macro_f1": 0.5734448374703485,
+      "std_macro_f1": 0.006053469816151188,
+      "mean_accuracy": 0.708570868693568,
+      "mean_macro_precision": 0.5621483896632562,
+      "mean_macro_recall": 0.5953240088582951
+    }
+  ],
+  "train_metrics": {
+    "accuracy": 0.7102872575497177,
+    "macro_precision": 0.563114401087936,
+    "macro_recall": 0.5976929500235793,
+    "macro_f1": 0.5760479685629278,
+    "weighted_f1": 0.7269113872571474
+  },
+  "test_metrics": {
+    "accuracy": 0.7114818449460255,
+    "macro_precision": 0.5659817994183318,
+    "macro_recall": 0.5977987094987193,
+    "macro_f1": 0.5779779207701472,
+    "weighted_f1": 0.7263497776075055
+  },
+  "model_path": "models\\logistic_regression_tuned.joblib",
+  "prior_models_unchanged": true,
+  "classification_report_test": "              precision    recall  f1-score   support\n\n         IPF     0.6529    0.7303    0.6894       152\n          HP     0.3596    0.3981    0.3779       103\n         CTD     0.3333    0.4531    0.3841       128\n       1_SAR     0.9180    0.8097    0.8605       636\n\n    accuracy                         0.7115      1019\n   macro avg     0.5660    0.5978    0.5780      1019\nweighted avg     0.7486    0.7115    0.7263      1019\n"
+}
