@@ -1,0 +1,76 @@
+{
+  "hgb_params": {
+    "max_iter": 200,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 30,
+    "l2_regularization": 1.0,
+    "random_state": 42
+  },
+  "selected_by_cv": "class_weighted_logistic_regression",
+  "train_class_weights": {
+    "IPF": 1.6830578512396694,
+    "HP": 2.471480582524272,
+    "CTD": 1.98876953125,
+    "1_SAR": 0.4002555031446541
+  },
+  "hgb_cv_summary": {
+    "mean_val_macro_f1": 0.5555481890145442,
+    "std_val_macro_f1": 0.014387424239404981,
+    "mean_val_accuracy": 0.7215854448983283,
+    "mean_val_macro_precision": 0.549770895359537,
+    "mean_val_macro_recall": 0.5634105827807465,
+    "mean_val_weighted_f1": 0.7281497750696555,
+    "mean_train_macro_f1": 0.9243531750207584,
+    "mean_train_accuracy": 0.9401547134619511,
+    "mean_train_val_macro_f1_gap": 0.3688049860062143,
+    "per_class_mean_val_f1": {
+      "IPF": 0.6190249824323255,
+      "HP": 0.375458294023193,
+      "CTD": 0.3379331320840587,
+      "1_SAR": 0.8897763475185994
+    },
+    "per_class_mean_val_recall": {
+      "IPF": 0.6413223140495867,
+      "HP": 0.3883632089332941,
+      "CTD": 0.3556253569388921,
+      "1_SAR": 0.8683314512012128
+    },
+    "per_class_mean_val_precision": {
+      "IPF": 0.5991029395881007,
+      "HP": 0.3651046857800539,
+      "CTD": 0.3221783526208305,
+      "1_SAR": 0.912697603449163
+    }
+  },
+  "lr_cv": {
+    "fold_macro_f1": [
+      0.56955230516336,
+      0.5740045970382459,
+      0.5552799266567682,
+      0.5651622961616634,
+      0.5706007295037099
+    ],
+    "mean_val_macro_f1": 0.5669199709047493,
+    "std_val_macro_f1": 0.007232723303876305,
+    "mean_val_accuracy": 0.7024322816960854,
+    "mean_val_macro_recall": 0.5878025735956752
+  },
+  "train_full_metrics": {
+    "accuracy": 0.9187331205499631,
+    "macro_precision": 0.8621494353191668,
+    "macro_recall": 0.9346020127596554,
+    "macro_f1": 0.8940013107759552,
+    "weighted_f1": 0.9208564746891916
+  },
+  "test_metrics": {
+    "accuracy": 0.7222767419038273,
+    "macro_precision": 0.542196156568131,
+    "macro_recall": 0.5491646962363778,
+    "macro_f1": 0.5451876201326513,
+    "weighted_f1": 0.7244565270565131
+  },
+  "model_path": "models\\hist_gradient_boosting_balanced.joblib",
+  "feature_importances_available": false,
+  "classification_report_test": "              precision    recall  f1-score   support\n\n         IPF     0.6115    0.6316    0.6214       152\n          HP     0.3248    0.3689    0.3455       103\n         CTD     0.3333    0.3125    0.3226       128\n       1_SAR     0.8992    0.8836    0.8914       636\n\n    accuracy                         0.7223      1019\n   macro avg     0.5422    0.5492    0.5452      1019\nweighted avg     0.7271    0.7223    0.7245      1019\n"
+}
